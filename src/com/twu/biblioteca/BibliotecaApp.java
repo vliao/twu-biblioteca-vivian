@@ -13,4 +13,7 @@ public class BibliotecaApp {
         //return null;
         return books;
     }
+
+    public void showAuthorPublication() {
+    }
 }

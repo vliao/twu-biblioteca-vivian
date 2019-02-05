@@ -34,4 +34,15 @@ public class ExampleTest {
 
     }
 
+    @Test
+    public void shouldShowAuthorPublication(){
+        List<String> books = new ArrayList<String>();
+        books.add("The Great Gatsby | F. Scott Fitzgerald | 1925");
+        books.add("Ender's Game | Orson Scott Card | 1985");
+        BibliotecaApp app = new BibliotecaApp();
+
+        List<String> booksresult= app.listBooks(books);
+        assertThat(booksresult, is(books));
+    }
+
 }
