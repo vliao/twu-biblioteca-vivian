@@ -18,8 +18,20 @@ public class BibliotecaApp {
     public void showAuthorPublication() {
     }
 
+    public String showMenuMessage(){
+        String menuMessage = "Here are your options: \n" +
+                "1. List all books";
+
+      return menuMessage;
+    }
+
     public static void main (String[] args){
         BibliotecaApp app = new BibliotecaApp();
         System.out.println(app.welcome());
+       // print(app.showMenuMessage());
+    }
+
+    public static void print(String message){
+        System.out.println(message);
     }
 }

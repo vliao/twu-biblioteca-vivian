@@ -23,10 +23,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+            <state relative-caret-position="261">
+              <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#841#842#0" expanded="true" />
+                <element signature="e#884#885#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -35,10 +37,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/ExampleTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="29" selection-end-column="34" />
+            <state relative-caret-position="157">
+              <caret line="42" column="46" lean-forward="true" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#290#291#0" expanded="true" />
+                <element signature="e#332#333#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,7 +62,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="500" />
+    <option name="x" value="537" />
     <option name="y" value="23" />
     <option name="width" value="1158" />
     <option name="height" value="973" />
@@ -111,7 +115,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549421484377" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549422850697" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -125,7 +129,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BibliotecaApp">
+  <component name="RunManager" selected="JUnit.All Tests">
+    <configuration name="All Tests" type="AndroidJUnit" temporary="true">
+      <module name="TWU_Biblioteca-master" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.ExampleTest" />
+      <option name="METHOD_NAME" value="shouldReturnWelcome" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ExampleTest.shouldListAllBooks" type="AndroidJUnit" temporary="true" nameIsGenerated="true">
       <module name="TWU_Biblioteca-master" />
       <extension name="coverage">
@@ -142,22 +163,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExampleTest.shouldReturnWelcome" type="AndroidJUnit" temporary="true" nameIsGenerated="true">
-      <module name="TWU_Biblioteca-master" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.ExampleTest" />
-      <option name="METHOD_NAME" value="shouldReturnWelcome" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BibliotecaApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaApp" />
       <module name="TWU_Biblioteca-master" />
@@ -167,6 +172,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All Tests" type="JUnit" factoryName="JUnit">
+      <module name="TWU_Biblioteca-master" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.ExampleTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -203,13 +219,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Android JUnit.ExampleTest.shouldListAllBooks" />
+      <item itemvalue="Android JUnit.All Tests" />
+      <item itemvalue="Application.BibliotecaApp" />
+      <item itemvalue="JUnit.All Tests" />
+      <item itemvalue="JUnit.ExampleTest.shouldListAllBooks" />
+      <item itemvalue="JUnit.ExampleTest.shouldShowAuthorPublication" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Android JUnit.All Tests" />
         <item itemvalue="Application.BibliotecaApp" />
         <item itemvalue="JUnit.ExampleTest.shouldShowAuthorPublication" />
         <item itemvalue="JUnit.ExampleTest.shouldListAllBooks" />
         <item itemvalue="Android JUnit.ExampleTest.shouldListAllBooks" />
-        <item itemvalue="Android JUnit.ExampleTest.shouldReturnWelcome" />
       </list>
     </recent_temporary>
   </component>
@@ -227,15 +251,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ExampleTest_shouldReturnWelcome - 2019.02.04 at 22h 11m 20s.xml">
-      <configuration name="ExampleTest.shouldReturnWelcome" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="ExampleTest_shouldReturnWelcome - 2019.02.04 at 22h 11m 37s.xml">
-      <configuration name="ExampleTest.shouldReturnWelcome" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="ExampleTest_shouldReturnWelcome - 2019.02.04 at 22h 21m 48s.xml">
-      <configuration name="ExampleTest.shouldReturnWelcome" configurationId="AndroidJUnit" />
-    </history-entry>
     <history-entry file="ExampleTest_shouldReturnWelcome - 2019.02.04 at 22h 21m 56s.xml">
       <configuration name="ExampleTest.shouldReturnWelcome" configurationId="AndroidJUnit" />
     </history-entry>
@@ -257,9 +272,18 @@
     <history-entry file="ExampleTest_shouldShowAuthorPublication - 2019.02.05 at 20h 49m 43s.xml">
       <configuration name="ExampleTest.shouldShowAuthorPublication" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ExampleTest_shouldReturnWelcome - 2019.02.05 at 21h 11m 45s.xml">
+      <configuration name="ExampleTest.shouldReturnWelcome" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="ExampleTest_shouldReturnWelcome - 2019.02.05 at 21h 11m 51s.xml">
+      <configuration name="ExampleTest.shouldReturnWelcome" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="All_Tests - 2019.02.05 at 21h 13m 44s.xml">
+      <configuration name="All Tests" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="500" y="23" width="1158" height="973" extended-state="0" />
+    <frame x="537" y="23" width="1158" height="973" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -300,20 +324,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/ExampleTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="29" selection-end-column="34" />
+        <state relative-caret-position="157">
+          <caret line="42" column="46" lean-forward="true" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#332#333#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        <state relative-caret-position="261">
+          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
           </folding>
         </state>
       </provider>
