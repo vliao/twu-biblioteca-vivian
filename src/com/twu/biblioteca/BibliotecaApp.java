@@ -1,5 +1,6 @@
 package com.twu.biblioteca;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BibliotecaApp {
@@ -15,5 +16,10 @@ public class BibliotecaApp {
     }
 
     public void showAuthorPublication() {
+    }
+
+    public static void main (String[] args){
+        BibliotecaApp app = new BibliotecaApp();
+        System.out.println(app.welcome());
     }
 }
