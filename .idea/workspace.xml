@@ -23,12 +23,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+            <state relative-caret-position="305">
+              <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#841#842#0" expanded="true" />
-                <element signature="e#884#885#0" expanded="true" />
+                <element signature="e#768#776#0" expanded="true" />
+                <element signature="e#1006#1007#0" expanded="true" />
+                <element signature="e#1049#1050#0" expanded="true" />
+                <element signature="e#1481#1482#0" expanded="true" />
+                <element signature="e#1524#1525#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -37,12 +40,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/ExampleTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="42" column="46" lean-forward="true" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
+            <state relative-caret-position="382">
+              <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#290#291#0" expanded="true" />
                 <element signature="e#332#333#0" expanded="true" />
+                <element signature="e#701#709#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,7 +66,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="537" />
+    <option name="x" value="679" />
     <option name="y" value="23" />
     <option name="width" value="1158" />
     <option name="height" value="973" />
@@ -115,7 +119,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549422850697" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549423540704" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -129,7 +133,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All Tests">
+  <component name="RunManager" selected="Application.BibliotecaApp">
     <configuration name="All Tests" type="AndroidJUnit" temporary="true">
       <module name="TWU_Biblioteca-master" />
       <extension name="coverage">
@@ -229,8 +233,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Android JUnit.All Tests" />
         <item itemvalue="Application.BibliotecaApp" />
+        <item itemvalue="Android JUnit.All Tests" />
         <item itemvalue="JUnit.ExampleTest.shouldShowAuthorPublication" />
         <item itemvalue="JUnit.ExampleTest.shouldListAllBooks" />
         <item itemvalue="Android JUnit.ExampleTest.shouldListAllBooks" />
@@ -251,12 +255,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ExampleTest_shouldReturnWelcome - 2019.02.04 at 22h 21m 56s.xml">
-      <configuration name="ExampleTest.shouldReturnWelcome" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="ExampleTest_shouldListAllBooks - 2019.02.04 at 22h 22m 06s.xml">
-      <configuration name="ExampleTest.shouldListAllBooks" configurationId="AndroidJUnit" />
-    </history-entry>
     <history-entry file="ExampleTest_shouldListAllBooks - 2019.02.04 at 22h 22m 21s.xml">
       <configuration name="ExampleTest.shouldListAllBooks" configurationId="JUnit" />
     </history-entry>
@@ -281,9 +279,15 @@
     <history-entry file="All_Tests - 2019.02.05 at 21h 13m 44s.xml">
       <configuration name="All Tests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_Tests - 2019.02.05 at 21h 14m 12s.xml">
+      <configuration name="All Tests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_Tests - 2019.02.05 at 21h 25m 06s.xml">
+      <configuration name="All Tests" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="537" y="23" width="1158" height="973" extended-state="0" />
+    <frame x="679" y="23" width="1158" height="973" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -324,24 +328,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/ExampleTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="42" column="46" lean-forward="true" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
+        <state relative-caret-position="382">
+          <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#290#291#0" expanded="true" />
             <element signature="e#332#333#0" expanded="true" />
+            <element signature="e#701#709#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        <state relative-caret-position="305">
+          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
-            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#768#776#0" expanded="true" />
+            <element signature="e#1006#1007#0" expanded="true" />
+            <element signature="e#1049#1050#0" expanded="true" />
+            <element signature="e#1481#1482#0" expanded="true" />
+            <element signature="e#1524#1525#0" expanded="true" />
           </folding>
         </state>
       </provider>
