@@ -7,7 +7,7 @@ public class Menu {
     public static String showMenuMessage(){
         String menuMessage = "Here are your options: \n" +
                 "1. List all books \n" +
-                "2. do something else \n " +
+                "2. do something else \n" +
                 "3. quit" ;
 
         return menuMessage;

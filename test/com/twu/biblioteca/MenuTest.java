@@ -11,8 +11,13 @@ public class MenuTest {
     public void shouldSeeMenu(){
         String expectedMenu = "Here are your options: \n" +
                 "1. List all books \n" +
-                "2. do something else \n " +
+                "2. do something else \n" +
                 "3. quit" ;
         assertThat(Menu.showMenuMessage(), is(expectedMenu));
+    }
+
+    @Test
+    public void shouldNotifyInvalidOption(){
+        String invalidOption = "";
     }
 }
