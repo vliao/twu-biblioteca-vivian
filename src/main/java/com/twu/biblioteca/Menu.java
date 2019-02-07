@@ -27,9 +27,11 @@ public class Menu {
     }
 
     public static void processOption(int i){
+
+        BookShelf b  = new BookShelf();
         switch(i){
             case 1:
-                print(ListBooks.listBooks());
+                print(b.listBooks());
                 break;
             case 2:
                 print("did something");
