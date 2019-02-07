@@ -4,37 +4,43 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
+
+
     public static String showMenuMessage(){
         String menuMessage = "Here are your options: \n" +
                 "1. List all books \n" +
-                "2. do something else \n" +
+                "2. Checkout a Book \n" +
                 "3. quit" ;
 
         return menuMessage;
     }
 
-    public static void run(){
+    public static void run(BookShelf b){
+
         //respond to user choice
         Scanner sc = new Scanner(System.in);
         int i = sc.nextInt();
 
         do {
-           processOption(i);
+           processOption(b, i);
            print(showMenuMessage());
            i = sc.nextInt();
         }
         while (i != 3);
     }
 
-    public static void processOption(int i){
+    public static void processOption(BookShelf b, int i){
 
-        BookShelf b  = new BookShelf();
         switch(i){
             case 1:
                 print(b.listBooks());
                 break;
             case 2:
-                print("did something");
+                System.out.println("What book would you like to check out?");
+                Scanner titleScan = new Scanner(System.in);
+                String title = titleScan.nextLine();
+                print(b.checkout(title));
+                b.listBooks();
                 break;
             case 3:
                 System.exit(0);

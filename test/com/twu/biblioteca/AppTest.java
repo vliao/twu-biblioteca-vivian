@@ -14,10 +14,11 @@ public class AppTest {
 
     @Test
     public void shouldContinueUntilQuitOption(){
+        BookShelf b = new BookShelf();
         //check whether the system exits after one. should only exit after quit option chosen.
         exit.expectSystemExitWithStatus(0); //main terminates peacefully
-        Menu.processOption(2);
-        Menu.processOption(3); //option 3 correlates to quit.
+        Menu.processOption(b, 1);
+        Menu.processOption(b, 3); //option 3 correlates to quit.
     }
 
 }

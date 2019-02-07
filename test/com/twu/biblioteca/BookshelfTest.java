@@ -21,9 +21,7 @@ public class BookshelfTest {
     @Test
     public void shouldCheckoutBook(){
         BookShelf bookshelf = new BookShelf();
-        System.out.println(bookshelf.listBooks());
         bookshelf.checkout("The Great Gatsby");
-        System.out.println(bookshelf.listBooks());
 
         List<Book> after = new ArrayList<Book>();
         after.add(new Book("The Great Gatsby", "F. Scott Fitzgerald", "1925", true));
@@ -31,5 +29,18 @@ public class BookshelfTest {
         BookShelf afterCheckout = new BookShelf(after) ;
 
         MatcherAssert.assertThat(bookshelf.listBooks(), is(afterCheckout.listBooks()));
+    }
+    @Test
+    public void shouldShowValidCheckoutMessage(){
+        BookShelf bookshelf = new BookShelf();
+        String response = bookshelf.checkout("The Great Gatsby");
+
+        MatcherAssert.assertThat(response, is("Thank you! Enjoy the book!"));
+    }
+    @Test
+    public void shouldShowInvalidCheckoutMessage(){
+        BookShelf bookshelf = new BookShelf();
+        String response = bookshelf.checkout("Water for Elephants");
+        MatcherAssert.assertThat(response, is("Sorry, that book is unavailable"));
     }
 }

@@ -24,14 +24,19 @@ public class BookShelf {
         return list;
     }
 
-
-    public void checkout(String title){
+    public String checkout(String title){
         Iterator<Book> it = books.iterator();
+        String response = "Sorry, that book is unavailable";
         while(it.hasNext()) {
             Book b = it.next();
-            if (b.title == title) {
+            if (b.title.equals(title) && b.checkedOut ==false) {
                 b.checkedOut = true;
+                response = "Thank you! Enjoy the book!";
+                return response;
             }
         }
+
+        return response;
     }
+
 }
