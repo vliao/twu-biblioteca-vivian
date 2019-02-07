@@ -18,7 +18,7 @@ public class AppTest {
         //check whether the system exits after one. should only exit after quit option chosen.
         exit.expectSystemExitWithStatus(0); //main terminates peacefully
         Menu.processOption(b, 1);
-        Menu.processOption(b, 3); //option 3 correlates to quit.
+        Menu.processOption(b, 4); //option 3 correlates to quit.
     }
 
 }

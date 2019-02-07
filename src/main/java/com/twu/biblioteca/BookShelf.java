@@ -16,6 +16,7 @@ public class BookShelf {
     }
 
     public String listBooks() {
+        System.out.println("We have the following books");
         String list = "";
         for ( Book b : books ){
             list += b.title + " | " + b.author + " | " + b.pubYear + " | " + b.checkedOut + " \n" ;
@@ -32,6 +33,21 @@ public class BookShelf {
             if (b.title.equals(title) && b.checkedOut ==false) {
                 b.checkedOut = true;
                 response = "Thank you! Enjoy the book!";
+                return response;
+            }
+        }
+
+        return response;
+    }
+
+    public String returnBook(String title){
+        Iterator<Book> it = books.iterator();
+        String response = "That is not a valid book to return";
+        while(it.hasNext()) {
+            Book b = it.next();
+            if (b.title.equals(title) && b.checkedOut ==true) {
+                b.checkedOut = false;
+                response = "Thank you for returning the book";
                 return response;
             }
         }

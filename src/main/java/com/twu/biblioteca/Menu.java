@@ -9,8 +9,9 @@ public class Menu {
     public static String showMenuMessage(){
         String menuMessage = "Here are your options: \n" +
                 "1. List all books \n" +
-                "2. Checkout a Book \n" +
-                "3. quit" ;
+                "2. Checkout a book \n" +
+                "3. Return a book \n" +
+                "4. Quit";
 
         return menuMessage;
     }
@@ -26,11 +27,11 @@ public class Menu {
            print(showMenuMessage());
            i = sc.nextInt();
         }
-        while (i != 3);
+        while (i != 4);
     }
 
     public static void processOption(BookShelf b, int i){
-
+       // Scanner titleScan;
         switch(i){
             case 1:
                 print(b.listBooks());
@@ -40,9 +41,14 @@ public class Menu {
                 Scanner titleScan = new Scanner(System.in);
                 String title = titleScan.nextLine();
                 print(b.checkout(title));
-                b.listBooks();
                 break;
             case 3:
+                System.out.println("What book would you like to return?");
+                Scanner returnTitleScan = new Scanner(System.in);
+                String returnTitle = returnTitleScan.nextLine();
+                print(b.returnBook(returnTitle));
+                break;
+            case 4:
                 System.exit(0);
                 break;
             default:

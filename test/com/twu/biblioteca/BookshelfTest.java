@@ -43,4 +43,34 @@ public class BookshelfTest {
         String response = bookshelf.checkout("Water for Elephants");
         MatcherAssert.assertThat(response, is("Sorry, that book is unavailable"));
     }
+
+    @Test
+    public void shouldReturnBook(){
+        BookShelf bookshelf = new BookShelf();
+
+        bookshelf.checkout("The Great Gatsby");
+        bookshelf.returnBook("The Great Gatsby");
+
+        List<Book> after = new ArrayList<Book>();
+        after.add(new Book("The Great Gatsby", "F. Scott Fitzgerald", "1925", false));
+        after.add(new Book("Ender's Game","Orson Scott Card", "1985", false));
+        BookShelf afterCheckout = new BookShelf(after) ;
+
+        MatcherAssert.assertThat(bookshelf.listBooks(), is(afterCheckout.listBooks()));
+    }
+
+    @Test
+    public void shouldShowValidReturnMessage(){
+        BookShelf bookshelf = new BookShelf();
+        bookshelf.checkout("The Great Gatsby");
+        String response = bookshelf.returnBook("The Great Gatsby");
+
+        MatcherAssert.assertThat(response, is( "Thank you for returning the book"));
+    }
+    @Test
+    public void shouldShowInvalidReturnMessage(){
+        BookShelf bookshelf = new BookShelf();
+        String response = bookshelf.returnBook("Water for Elephants");
+        MatcherAssert.assertThat(response, is("That is not a valid book to return"));
+    }
 }

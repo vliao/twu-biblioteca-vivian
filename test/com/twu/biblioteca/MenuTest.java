@@ -11,8 +11,9 @@ public class MenuTest {
     public void shouldSeeMenu(){
         String expectedMenu = "Here are your options: \n" +
                 "1. List all books \n" +
-                "2. Checkout a Book \n" +
-                "3. quit" ;
+                "2. Checkout a book \n" +
+                "3. Return a book \n" +
+                "4. Quit";
         assertThat(Menu.showMenuMessage(), is(expectedMenu));
     }
 
