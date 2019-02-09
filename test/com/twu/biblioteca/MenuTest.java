@@ -13,7 +13,9 @@ public class MenuTest {
                 "1. List all books \n" +
                 "2. Checkout a book \n" +
                 "3. Return a book \n" +
-                "4. Quit";
+                "4. List all movies \n" +
+                "5. Checkout a movie \n" +
+                "6. Quit";
         assertThat(Menu.showMenuMessage(), is(expectedMenu));
     }
 

@@ -11,26 +11,31 @@ public class Menu {
                 "1. List all books \n" +
                 "2. Checkout a book \n" +
                 "3. Return a book \n" +
-                "4. Quit";
+                "4. List all movies \n" +
+                "5. Checkout a movie \n" +
+                "6. Quit";
 
         return menuMessage;
     }
 
-    public static void run(BookShelf b){
+    public static void run(){
+        BibliotecaApp app = new BibliotecaApp();
+        BookShelf b = app.getBookshelf();
+        MovieShelf m = app.getMovieShelf();
 
         //respond to user choice
         Scanner sc = new Scanner(System.in);
         int i = sc.nextInt();
 
         do {
-           processOption(b, i);
+           processOption(b, m, i);
            print(showMenuMessage());
            i = sc.nextInt();
         }
-        while (i != 4);
+        while (i != 6);
     }
 
-    public static void processOption(BookShelf b, int i){
+    public static void processOption(BookShelf b, MovieShelf m, int i){
        // Scanner titleScan;
         switch(i){
             case 1:
@@ -49,6 +54,9 @@ public class Menu {
                 print(b.returnBook(returnTitle));
                 break;
             case 4:
+                print(m.listMovies());
+                break;
+            case 6:
                 System.exit(0);
                 break;
             default:
