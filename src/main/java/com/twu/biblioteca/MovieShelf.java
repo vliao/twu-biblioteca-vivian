@@ -7,10 +7,10 @@ import java.util.List;
 public class MovieShelf {
     private List<Movie> movies = new ArrayList<Movie>();
 
-    public MovieShelf(){
-        movies.add(new Movie("Up", 2009 , "Pete Doctor", 10 , false));
-        movies.add(new Movie("Moana", 2016, "Ron Clements", 10, false));
-    }
+//    public MovieShelf(){
+//        movies.add(new Movie("Up", 2009 , "Pete Doctor", 10 , false));
+//        movies.add(new Movie("Moana", 2016, "Ron Clements", 10, false));
+//    }
 
     public MovieShelf(List<Movie> movies){
         this.movies = movies;

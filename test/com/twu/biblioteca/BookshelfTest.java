@@ -1,76 +1,93 @@
 package com.twu.biblioteca;
 
 import org.hamcrest.MatcherAssert;
+import org.junit.Before;
 import org.junit.Test;
 
+import java.io.PrintStream;
 import java.util.*;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.*;
+
 
 public class BookshelfTest {
-    @Test
-    public void shouldShowBooks(){
-        String expectedBooks = "The Great Gatsby | F. Scott Fitzgerald | 1925 | false \n" +
-                        "Ender's Game | Orson Scott Card | 1985 | false \n" ;
-        BookShelf shelf = new BookShelf();
-        String booksresult= shelf.listBooks();
-        assertThat(booksresult, is(expectedBooks));
+    BookShelf shelf;
+
+    @Before
+    public void initialize(){
+        List<Book> books = new ArrayList<Book>();
+        books.add(new Book("The Great Gatsby", "F. Scott Fitzgerald", "1925", false));
+        books.add(new Book("Ender's Game","Orson Scott Card", "1985", false));
+        shelf = new BookShelf(books);
     }
 
     @Test
-    public void shouldCheckoutBook(){
-        BookShelf bookshelf = new BookShelf();
-        bookshelf.checkout("The Great Gatsby");
+    public void shouldShowBooks(){
+//        String expectedBooks = "The Great Gatsby | F. Scott Fitzgerald | 1925 | false \n" +
+//                        "Ender's Game | Orson Scott Card | 1985 | false \n" ;
+//        String booksresult= shelf.listBooks();
+//        assertThat(booksresult, is(expectedBooks));
+
+        PrintStream printStream = mock(PrintStream.class);
+        BookShelf bs = mock(BookShelf.class);
+
+        when(bs.listBooks()).thenReturn("The Great Gatsby | F. Scott Fitzgerald | 1925 | false \n" +
+                "Ender's Game | Orson Scott Card | 1985 | false \n");
+
+        printStream.println(bs.listBooks());
+        verify(printStream).println("The Great Gatsby | F. Scott Fitzgerald | 1925 | false \n" +
+                "Ender's Game | Orson Scott Card | 1985 | false \n");
+    }
+
+    @Test
+    //ask how a mock could be used here?
+    public void shouldCheckoutBoo(){
+        shelf.checkout("The Great Gatsby");
 
         List<Book> after = new ArrayList<Book>();
         after.add(new Book("The Great Gatsby", "F. Scott Fitzgerald", "1925", true));
         after.add(new Book("Ender's Game","Orson Scott Card", "1985", false));
         BookShelf afterCheckout = new BookShelf(after) ;
 
-        MatcherAssert.assertThat(bookshelf.listBooks(), is(afterCheckout.listBooks()));
+        MatcherAssert.assertThat(shelf.listBooks(), is(afterCheckout.listBooks()));
     }
     @Test
     public void shouldShowValidCheckoutMessage(){
-        BookShelf bookshelf = new BookShelf();
-        String response = bookshelf.checkout("The Great Gatsby");
+        String response = shelf.checkout("The Great Gatsby");
 
         MatcherAssert.assertThat(response, is("Thank you! Enjoy the book!"));
     }
     @Test
     public void shouldShowInvalidCheckoutMessage(){
-        BookShelf bookshelf = new BookShelf();
-        String response = bookshelf.checkout("Water for Elephants");
+        String response = shelf.checkout("Water for Elephants");
         MatcherAssert.assertThat(response, is("Sorry, that book is unavailable"));
     }
 
     @Test
     public void shouldReturnBook(){
-        BookShelf bookshelf = new BookShelf();
-
-        bookshelf.checkout("The Great Gatsby");
-        bookshelf.returnBook("The Great Gatsby");
+        shelf.checkout("The Great Gatsby");
+        shelf.returnBook("The Great Gatsby");
 
         List<Book> after = new ArrayList<Book>();
         after.add(new Book("The Great Gatsby", "F. Scott Fitzgerald", "1925", false));
         after.add(new Book("Ender's Game","Orson Scott Card", "1985", false));
         BookShelf afterCheckout = new BookShelf(after) ;
 
-        MatcherAssert.assertThat(bookshelf.listBooks(), is(afterCheckout.listBooks()));
+        MatcherAssert.assertThat(shelf.listBooks(), is(afterCheckout.listBooks()));
     }
 
     @Test
     public void shouldShowValidReturnMessage(){
-        BookShelf bookshelf = new BookShelf();
-        bookshelf.checkout("The Great Gatsby");
-        String response = bookshelf.returnBook("The Great Gatsby");
+        shelf.checkout("The Great Gatsby");
+        String response = shelf.returnBook("The Great Gatsby");
 
         MatcherAssert.assertThat(response, is( "Thank you for returning the book"));
     }
     @Test
     public void shouldShowInvalidReturnMessage(){
-        BookShelf bookshelf = new BookShelf();
-        String response = bookshelf.returnBook("Water for Elephants");
+        String response = shelf.returnBook("Water for Elephants");
         MatcherAssert.assertThat(response, is("That is not a valid book to return"));
     }
 }

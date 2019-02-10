@@ -6,10 +6,10 @@ public class BookShelf {
     //initialize bookslist
     private List<Book> books = new ArrayList<Book>();
 
-    public BookShelf(){
-        books.add(new Book("The Great Gatsby", "F. Scott Fitzgerald", "1925", false));
-        books.add(new Book("Ender's Game","Orson Scott Card", "1985", false));
-    }
+//    public BookShelf(){
+//        books.add(new Book("The Great Gatsby", "F. Scott Fitzgerald", "1925", false));
+//        books.add(new Book("Ender's Game","Orson Scott Card", "1985", false));
+//    }
 
     public BookShelf(List<Book> books){
         this.books = books;
@@ -36,7 +36,6 @@ public class BookShelf {
                 return response;
             }
         }
-
         return response;
     }
 
@@ -51,7 +50,6 @@ public class BookShelf {
                 return response;
             }
         }
-
         return response;
     }
 

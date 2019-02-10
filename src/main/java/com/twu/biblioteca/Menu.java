@@ -13,7 +13,7 @@ public class Menu {
                 "3. Return a book \n" +
                 "4. List all movies \n" +
                 "5. Checkout a movie \n" +
-                "6. Quit";
+                "8. Quit";
 
         return menuMessage;
     }
@@ -22,6 +22,9 @@ public class Menu {
         BibliotecaApp app = new BibliotecaApp();
         BookShelf b = app.getBookshelf();
         MovieShelf m = app.getMovieShelf();
+
+        //app.users.add(new User());
+      // app.listUsers();
 
         //respond to user choice
         Scanner sc = new Scanner(System.in);
@@ -32,7 +35,7 @@ public class Menu {
            print(showMenuMessage());
            i = sc.nextInt();
         }
-        while (i != 6);
+        while (i != 8);
     }
 
     public static void processOption(BookShelf b, MovieShelf m, int i){
@@ -56,7 +59,10 @@ public class Menu {
             case 4:
                 print(m.listMovies());
                 break;
-            case 6:
+            case 5:
+                break;
+
+            case 8:
                 System.exit(0);
                 break;
             default:
