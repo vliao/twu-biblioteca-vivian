@@ -19,6 +19,7 @@ import static org.mockito.Mockito.when;
 public class AppTest {
     BookShelf shelf;
     MovieShelf movieShelf;
+    Menu menu;
 
     @Before
     public void initialize(){
@@ -37,24 +38,12 @@ public class AppTest {
     public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
     @Test
-    public void shouldRequireUserToLogin(){
-
-    }
-
-    @Test
-    public void shouldLogUserIn(){
-        BibliotecaApp app = new BibliotecaApp();
-        //app.userLogin();
-
-
-    }
-
-    @Test
     public void shouldContinueUntilQuitOption(){
+        menu = new Menu();
         //check whether the system exits after one. should only exit after quit option chosen.
         exit.expectSystemExitWithStatus(0); //main terminates peacefully
-        Menu.processOption(shelf, movieShelf, 1);
-        Menu.processOption(shelf, movieShelf, 8); //option 3 correlates to quit.
+        menu.processOption(shelf, movieShelf, 1);
+        menu.processOption(shelf, movieShelf, 8); //option 3 correlates to quit.
     }
 
 }

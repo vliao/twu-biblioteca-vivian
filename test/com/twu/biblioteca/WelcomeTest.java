@@ -19,7 +19,7 @@ public class WelcomeTest {
         start = new Welcome();
         app = new BibliotecaApp();
         users = new ArrayList<User>();
-        users.add(new User("123-1234", "123"));
+        users.add(new User( "John","jdoe@g.com", "123-1234", "123" ));
         app.setUsers(users);
     }
 
@@ -32,15 +32,15 @@ public class WelcomeTest {
 
     @Test
     public void shouldValidateUser(){
-        User u = new User("123-1234", "123");
-        boolean valid = start.validateUser(u, users);
+      //  User u = new User("John","jdoe@g.com","123-1234", "123");
+        boolean valid = start.validateUser("123-1234", "123", users);
         assertThat(valid, is(true));
     }
 
     @Test
     public void shouldNotValidateUser(){
-        User u = new User("123-1234", "321");
-        boolean valid = start.validateUser(u, users);
+       // User u = new User("John","jdoe@g.com","123-1234", "321");
+        boolean valid = start.validateUser("123-1234", "321", users);
         assertThat(valid, is(false));
     }
 }

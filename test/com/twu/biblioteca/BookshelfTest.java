@@ -14,6 +14,7 @@ import static org.mockito.Mockito.*;
 
 public class BookshelfTest {
     BookShelf shelf;
+    User user;
 
     @Before
     public void initialize(){
@@ -21,6 +22,7 @@ public class BookshelfTest {
         books.add(new Book("The Great Gatsby", "F. Scott Fitzgerald", "1925", false));
         books.add(new Book("Ender's Game","Orson Scott Card", "1985", false));
         shelf = new BookShelf(books);
+        user = new User("John","jdoe@g.com","123-4321", "123");
     }
 
     @Test
@@ -43,8 +45,8 @@ public class BookshelfTest {
 
     @Test
     //ask how a mock could be used here?
-    public void shouldCheckoutBoo(){
-        shelf.checkout("The Great Gatsby");
+    public void shouldCheckoutBook(){
+        shelf.checkout(user,"The Great Gatsby");
 
         List<Book> after = new ArrayList<Book>();
         after.add(new Book("The Great Gatsby", "F. Scott Fitzgerald", "1925", true));
@@ -55,20 +57,20 @@ public class BookshelfTest {
     }
     @Test
     public void shouldShowValidCheckoutMessage(){
-        String response = shelf.checkout("The Great Gatsby");
+        String response = shelf.checkout(user,"The Great Gatsby");
 
         MatcherAssert.assertThat(response, is("Thank you! Enjoy the book!"));
     }
     @Test
     public void shouldShowInvalidCheckoutMessage(){
-        String response = shelf.checkout("Water for Elephants");
+        String response = shelf.checkout(user,"Water for Elephants");
         MatcherAssert.assertThat(response, is("Sorry, that book is unavailable"));
     }
 
     @Test
     public void shouldReturnBook(){
-        shelf.checkout("The Great Gatsby");
-        shelf.returnBook("The Great Gatsby");
+        shelf.checkout(user,"The Great Gatsby");
+        shelf.returnBook(user, "The Great Gatsby");
 
         List<Book> after = new ArrayList<Book>();
         after.add(new Book("The Great Gatsby", "F. Scott Fitzgerald", "1925", false));
@@ -80,14 +82,14 @@ public class BookshelfTest {
 
     @Test
     public void shouldShowValidReturnMessage(){
-        shelf.checkout("The Great Gatsby");
-        String response = shelf.returnBook("The Great Gatsby");
+        shelf.checkout(user,"The Great Gatsby");
+        String response = shelf.returnBook(user,"The Great Gatsby");
 
         MatcherAssert.assertThat(response, is( "Thank you for returning the book"));
     }
     @Test
     public void shouldShowInvalidReturnMessage(){
-        String response = shelf.returnBook("Water for Elephants");
+        String response = shelf.returnBook(user,"Water for Elephants");
         MatcherAssert.assertThat(response, is("That is not a valid book to return"));
     }
 }

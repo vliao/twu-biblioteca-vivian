@@ -11,13 +11,13 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class MovieShelfTest {
+    BibliotecaApp app;
     MovieShelf shelf;
     @Before
     public void initialize(){
-        List<Movie> movies = new ArrayList<Movie>();
-        movies.add(new Movie("Up", 2009 , "Pete Doctor", 10 , false));
-        movies.add(new Movie("Moana", 2016, "Ron Clements", 10, false));
-        shelf = new MovieShelf(movies);
+        app = new BibliotecaApp();
+        app.initializeMovieShelf();
+        shelf = app.getMovieShelf();
     }
     @Test
     public void shouldSeeMovieList(){
@@ -31,7 +31,7 @@ public class MovieShelfTest {
 
     @Test
     public void shouldCheckoutMovie(){
-        shelf.checkout("Up");
+        shelf.checkoutMovie("Up");
 
         List<Movie> after = new ArrayList<Movie>();
         after.add(new Movie("Up", 2009 , "Pete Doctor", 10 , true));
