@@ -9,7 +9,7 @@ public class MenuTest {
 
     @Test
     public void shouldSeeMenu(){
-        Librarian l = new Librarian();
+        Librarian l ;
         String expectedMenu = "Here are your options: \n" +
                 "1. List all books \n" +
                 "2. Checkout a book \n" +
