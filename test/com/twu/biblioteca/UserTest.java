@@ -18,7 +18,6 @@ public class UserTest {
     @Before
     public void initialize(){
         app = new BibliotecaApp();
-        app.initializeBookShelf();
         user = new User("Vivian",  "vvn@yahoo.com", "123-1234", "123");
 
     }
@@ -46,18 +45,9 @@ public class UserTest {
     }
 
     @Test
-    public void shouldListUsers(){
-        app.listUsers();
-        String users = "123-1234";
-        String expectedUsers = "123-1234";
-
-        assertThat(users, is(expectedUsers));
-    }
-
-    @Test
     public void shouldShowOneBookCheckedOut(){
         String title = "The Great Gatsby";
-        app.getBookshelf().checkout(user,title);
+        app.getLibrary().getBookshelf().checkout(user,title);
         String titles= user.showBooks();
         String usersTitles="The Great Gatsby\n";
         assertThat(usersTitles, is(titles));
@@ -66,9 +56,9 @@ public class UserTest {
     @Test
     public void shouldShowTwoBooksCheckedOut(){
         String title = "The Great Gatsby";
-        app.getBookshelf().checkout(user,title);
+        app.getLibrary().getBookshelf().checkout(user,title);
         title = "Ender's Game";
-        app.getBookshelf().checkout(user,title);
+        app.getLibrary().getBookshelf().checkout(user,title);
         String titles= user.showBooks();
         String usersTitles="The Great Gatsby\nEnder's Game\n";
         assertThat(usersTitles, is(titles));
@@ -77,8 +67,8 @@ public class UserTest {
     @Test
     public void shouldShowNoBooksIfReturned(){
         String title = "The Great Gatsby";
-        app.getBookshelf().checkout(user,title);
-        app.getBookshelf().returnBook(user,title);
+        app.getLibrary().getBookshelf().checkout(user,title);
+        app.getLibrary().getBookshelf().returnBook(user,title);
 
         String titles= user.showBooks();
         String usersTitles="";

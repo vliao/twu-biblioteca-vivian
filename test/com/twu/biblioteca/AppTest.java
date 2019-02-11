@@ -39,11 +39,11 @@ public class AppTest {
 
     @Test
     public void shouldContinueUntilQuitOption(){
-        menu = new Menu();
+        Librarian l = new Librarian();
         //check whether the system exits after one. should only exit after quit option chosen.
         exit.expectSystemExitWithStatus(0); //main terminates peacefully
-        menu.processOption(shelf, movieShelf, 1);
-        menu.processOption(shelf, movieShelf, 8); //option 3 correlates to quit.
+        l.processOption( 1);
+        l.processOption(8);
     }
 
 }

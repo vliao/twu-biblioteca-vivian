@@ -9,7 +9,7 @@ public class MenuTest {
 
     @Test
     public void shouldSeeMenu(){
-        Menu menu = new Menu();
+        Librarian l = new Librarian();
         String expectedMenu = "Here are your options: \n" +
                 "1. List all books \n" +
                 "2. Checkout a book \n" +
@@ -19,7 +19,7 @@ public class MenuTest {
                 "6. View my books \n" +
                 "7. View my information \n" +
                 "8. Quit";
-        assertThat(menu.showMenuMessage(), is(expectedMenu));
+        assertThat(l.showMenuMessage(), is(expectedMenu));
     }
 
     @Test

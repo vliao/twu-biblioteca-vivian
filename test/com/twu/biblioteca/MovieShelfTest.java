@@ -16,8 +16,7 @@ public class MovieShelfTest {
     @Before
     public void initialize(){
         app = new BibliotecaApp();
-        app.initializeMovieShelf();
-        shelf = app.getMovieShelf();
+        shelf = app.getLibrary().getMovieShelf();
     }
     @Test
     public void shouldSeeMovieList(){

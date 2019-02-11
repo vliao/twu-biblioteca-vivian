@@ -3,30 +3,25 @@ package com.twu.biblioteca;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-import static org.mockito.Mockito.*;
 
-public class WelcomeTest {
-    Welcome start;
+public class LibrarianTest {
+    Librarian start;
     BibliotecaApp app;
     List<User> users;
     @Before
     public void setUp(){
-        start = new Welcome();
+        start = new Librarian();
         app = new BibliotecaApp();
-        users = new ArrayList<User>();
-        users.add(new User( "John","jdoe@g.com", "123-1234", "123" ));
-        app.setUsers(users);
     }
 
     @Test
     public void shouldReturnWelcome() {
         String message = start.welcome();
-        String expectedMessage = "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!";
+        String expectedMessage = "Librarian to Biblioteca. Your one-stop-shop for great book titles in Bangalore!";
         assertThat(message, is(expectedMessage));
     }
 
